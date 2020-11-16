@@ -1,11 +1,52 @@
-.App {
-  text-align: center;
+
+/*Background style for the entire page*/
+.page-style {
+  background-color: navy;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Syle for the clock face*/
+#clock-face {
+  border: 15px solid white;
+  border-radius: 50%;
+  height: 40vh;
+  width: 50vw;
+  transform:  translateY(-3px);
 }
+
+.hand {
+  position: absolute;
+  width: 50vw;
+  height: 2px;
+  
+  border: 2px solid black;
+  top: 50%;
+  transform-origin: 100%;
+  transform: (rotate(90deg));
+  transition: 0.0 s;
+
+}
+
+#hour-hand {
+  background-color: red;
+}
+
+#minute-hand {
+  background-color: orange;
+}
+
+#second-hand {
+  background-color: green;
+}
+
+
+
+
+/*Old Material not used*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
