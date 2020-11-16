@@ -13,34 +13,42 @@
 #clock-face {
   border: 15px solid white;
   border-radius: 50%;
-  height: 40vh;
-  width: 50vw;
+  height: 30rem;
+  width: 30rem;
   transform:  translateY(-3px);
 }
 
 .hand {
   position: absolute;
-  width: 50vw;
-  height: 2px;
-  
-  border: 2px solid black;
+  width: 50%;
+  height: 1px;  
+  border: 5px solid black;
   top: 50%;
-  transform-origin: 100%;
-  transform: (rotate(90deg));
-  transition: 0.0 s;
-
 }
 
 #hour-hand {
   background-color: red;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 #minute-hand {
   background-color: orange;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 #second-hand {
   background-color: green;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 
