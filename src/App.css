@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Background style for the entire page*/
+.page-style {
+  background-color: navy;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/*Style for the clock face, Small screens under 768px*/
+#clock-face {
+  border: 15px solid white;
+  border-radius: 50%;
+  height: 40vh;
+  width: 85vw;
+  transform:  translateY(-3px);
+}
+
+/*Small screens*/
+@media only screen and (max-width: 375px) {
+  #clock-face {
+    height: 21rem;
+    width: 85vw;
+  }
+}
+
+/*Smaller screens*/
+@media only screen and (max-width: 361px) {
+  #clock-face {
+    height: 20rem;
+    width: 85vw;
+  }
+}
+
+/*large screens*/
+@media only screen and (min-width: 767px) {
+  #clock-face {
+    height: 64vh;
+    width: 85vw;
+  }
+}
+
+#digital-time {
+  margin-bottom: 5vh;
   color: white;
+  font-size: xx-large;
 }
 
-.App-link {
-  color: #61dafb;
+.hand {
+  position: absolute;
+  width: 46%;
+  height: 1px;  
+  border: 5px solid black;
+  top: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*larger screens*/
+@media only screen and (min-width: 1125px) {
+  .hand {
+    width: 45%;
+    right: 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  #clock-face {
+    height: 75vh;
+    width: 82vw;
   }
 }
+
+/*Long screens*/
+@media only screen and (min-height: 940px) and (min-width: 1125px) {
+  .hand {
+    width: 46%;
+    right: 50%;
+  }
+
+  #clock-face {
+    height: 78vh;
+    width: 60vw;
+  }
+}
+
+#hour-hand {
+  background-color: red;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+#minute-hand {
+  background-color: orange;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+#second-hand {
+  background-color: green;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
+
