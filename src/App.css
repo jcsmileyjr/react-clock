@@ -70,6 +70,19 @@
   }
 }
 
+/*Long screens*/
+@media only screen and (min-height: 940px) {
+  .hand {
+    width: 46%;
+    right: 50%;
+  }
+
+  #clock-face {
+    height: 78vh;
+    width: 60vw;
+  }
+}
+
 #hour-hand {
   background-color: red;
   transform-origin: 100%;
